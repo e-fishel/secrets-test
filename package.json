@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dotenvx_1": "node dotenvx_importing.js",
-    "dotenvx_2": "npx dotenvx run -- node dotenvx_vanilla.js"
+    "dotenvx_2": "npx dotenvx run -- node dotenvx_vanilla.js",
+    "doppler": "doppler run --command=\"node doppler_demo.js\""
   },
   "repository": {
     "type": "git",
