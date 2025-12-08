@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/e-fishel/secrets-test/issues"
   },
-  "homepage": "https://github.com/e-fishel/secrets-test#readme"
+  "homepage": "https://github.com/e-fishel/secrets-test#readme",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.51.1"
+  }
 }
