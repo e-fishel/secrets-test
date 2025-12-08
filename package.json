@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dotenvx_1": "node dotenvx_importing.js",
+    "dotenvx_2": "npx dotenvx run -- node dotenvx_vanilla.js"
   },
   "repository": {
     "type": "git",
