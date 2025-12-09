@@ -23,10 +23,12 @@ jobs:
         run: echo "hi"
 
       - name: "Step 2: print var"
-        run: echo "here comes a gh variable"
-        run: echo $WHICH_ENV_VAR
+        run: |
+          echo "here comes a gh variable"
+          echo $WHICH_ENV_VAR
 
       - name: "Step 3: print secret"
-        run: echo "here comes a gh secret"
-        run: echo $WHICH_ENV_SECRET
+        run: |
+          echo "here comes a gh secret"
+          echo $WHICH_ENV_SECRET
     
