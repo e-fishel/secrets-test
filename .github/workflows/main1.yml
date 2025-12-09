@@ -22,7 +22,7 @@ jobs:
       - name: My Step 1
         run: echo "hi"
 
-      - name: "Step 2: print var"
+      - name: "Step 2: print var (${{ env.WHICH_ENV_VAR }})"
         run: |
           echo "here comes a gh variable"
           echo $WHICH_ENV_VAR
