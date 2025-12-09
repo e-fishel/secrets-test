@@ -15,7 +15,7 @@ jobs:
     environment: ${{ inputs.environment }}
 
     env:
-      WHICH_ENV_VAR: ${{ variables.WHICH_ENV_VAR }}
+      WHICH_ENV_VAR: ${{ vars.WHICH_ENV_VAR }}
       WHICH_ENV_SECRET: ${{ secrets.WHICH_ENV_SECRET }}
 
     steps:
