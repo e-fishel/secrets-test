@@ -2,11 +2,31 @@ name: My GitHub Actions Test
 
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to run in'
+        type: environment
+        required: true
 
 jobs:
   my-test:
     runs-on: ubuntu-latest
 
+    environment: ${{ $inputs.environment }}
+
+    env:
+      WHICH_ENV_VAR: ${{ secrets.WHICH_ENV_VAR }}
+      WHICH_ENV_SECRET: ${{ secrets.WHICH_ENV_SECRET }}
+
     steps:
-      - run: echo "hi"
+      - name: My Step 1
+        run: echo "hi"
+
+      - name: "Step 2: print var"
+        run: echo "here comes a gh variable"
+        run: echo $WHICH_ENV_VAR
+
+      - name: "Step 3: print secret"
+        run: echo "here comes a gh secret"
+        run: echo $WHICH_ENV_SECRET
     
