@@ -12,7 +12,7 @@ jobs:
   my-test:
     runs-on: ubuntu-latest
 
-    environment: ${{ $inputs.environment }}
+    environment: ${{ inputs.environment }}
 
     env:
       WHICH_ENV_VAR: ${{ secrets.WHICH_ENV_VAR }}
