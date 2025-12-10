@@ -10,6 +10,7 @@ on:
 
 jobs:
   my-bw-test:
+    runs-on: ubuntu-latest
     steps:
       - name: Get BW Secrets
         uses: bitwarden/sm-action@v2
@@ -24,4 +25,3 @@ jobs:
         run: |
           echo "secret 1 is $SECRET_1"
           echo "secret 2 is $SECRET_2"
-  
