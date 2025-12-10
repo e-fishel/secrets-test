@@ -1,0 +1,27 @@
+name: BitWarden Secrets GH Actions Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to run in'
+        type: environment
+        required: true
+
+jobs:
+  my-bw-test:
+    steps:
+      - name: Get BW Secrets
+        uses: bitwarden/sm-action@v2
+        with:
+          access_token: ${{ secrets.BWS_GH_ACCESS_TOKEN }}
+          base_url: https://vault.bitwarden.com
+          secrets: |
+            0e394239-5075-4eb7-ab7f-b3af00107dd7 > SECRET_1
+            677e38f5-0755-43ad-a2f7-b3af0010dd6e > SECRET_2
+      
+      - name: Print them
+        run: |
+          echo "secret 1 is $SECRET_1"
+          echo "secret 2 is $SECRET_2"
+  
