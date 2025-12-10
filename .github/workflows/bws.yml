@@ -11,6 +11,7 @@ on:
 jobs:
   my-bw-test:
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
     steps:
       - name: Get BW Secrets
         uses: bitwarden/sm-action@v2
