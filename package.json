@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dotenvx_encrypt_prod": "npx dotenvx encrypt -f .env.production",
-    "dotenvx_decrypt_prod": "npx dotenvx decrypt -f .env.production",
-    "dotenvx_run_under_prod": "npx dotenvx run -f .env.production -- node dotenvx_demo.js",
+    "dotenvx_encrypt": "npx dotenvx encrypt -f .env.production",
+    "dotenvx_decrypt": "npx dotenvx decrypt -f .env.production",
+    "dotenvx": "npx dotenvx run -f .env.production -- node dotenvx_demo.js",
     "dotenvx_run_under_default": "node dotenvx_demo.js",
-    "doppler": "doppler run --command=\"node doppler_demo.js\""
+    "doppler": "doppler run --command=\"node doppler_demo.js\"",
+    "bitwarden_bws": "bws run -- node bitwarden_bws_demo.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
   },
   "homepage": "https://github.com/e-fishel/secrets-test#readme",
   "dependencies": {
+    "@bitwarden/sdk-napi": "^1.0.0",
+    "@bitwarden/sdk-wasm": "^0.1.0",
     "@dotenvx/dotenvx": "^1.51.1"
   }
 }
