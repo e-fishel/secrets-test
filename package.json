@@ -9,7 +9,8 @@
     "dotenvx": "npx dotenvx run -f .env.production -- node dotenvx_demo.js",
     "dotenvx_run_under_default": "node dotenvx_demo.js",
     "doppler": "doppler run --command=\"node doppler_demo.js\"",
-    "bitwarden_bws": "bws run -- node bitwarden_bws_demo.js"
+    "bitwarden_bws": "bws run -- node bitwarden_bws_demo.js",
+    "infisical2": "infisical run -- node infisical_demo2"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   "dependencies": {
     "@bitwarden/sdk-napi": "^1.0.0",
     "@bitwarden/sdk-wasm": "^0.1.0",
-    "@dotenvx/dotenvx": "^1.51.1"
+    "@dotenvx/dotenvx": "^1.51.1",
+    "@infisical/sdk": "^4.0.6"
   }
 }
